@@ -32,6 +32,32 @@ These steps are taken from [here](https://posit.co/download/rstudio-server/).
     -   Verify
 
         -   [http://server-ip](http://%3Cserver-ip){.uri}:8787
-3.  
+        -   Other useful commands
+            -   Status
+                -   `service rstudio-server status`
+            -   Stop
+                -   `service rstudio-server stop`
+            -   Start
+                -   `service rstudio-server start`
+            -   Restart
+                -   `service rstudio-server restart`
+
+## User Setup
+
+RStudio Server works for all users other than root, so we need to create users and a group to use for scoping what RStudio Server will allow in.
+
+-   useradd sam
+
+-   passwd sam
+
+Users then need to be put into the rstudio-users group
+
+-   sudo groupadd rstudio-users
+
+-   usermod -g rstudio-users sam_real1
+
+-   usermod -g rstudio-users sam_real2
+
+-   usermod -g rstudio-users somer_stat_real
 
 \* \* \* \* \* (cd /home/sam/Test\\ RStudio\\ Server\\ Project && /usr/local/bin/Rscript /home/sam/Test\\ RStudio\\ Server\\ Project/Trying\\ to\\ Schedule\\ A\\ Thing.R)

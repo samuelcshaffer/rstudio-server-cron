@@ -22,10 +22,10 @@ wget https://download2.rstudio.org/server/centos7/x86_64/rstudio-server-rhel-202
 sudo yum install rstudio-server-rhel-2022.12.0-353-x86_64.rpm
 
 # (optional) add following line to /etc/rstudio/rserver.conf
-www-port=80
+# www-port=80
 
 # for wsl, we want to enable systemctl and have cron start automatically. Add following lines to /etc/wsl.conf 
-[boot]
-systemd=true
-command="service cron start"
+# [boot]
+# systemd=true
+# command="service cron start"
 
