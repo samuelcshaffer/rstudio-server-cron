@@ -29,3 +29,14 @@ sudo yum install rstudio-server-rhel-2022.12.0-353-x86_64.rpm
 # systemd=true
 # command="service cron start"
 
+# create Rstudio User Group
+sudo groupadd rstudio-users
+
+# configure RStudio Server to only let in certain users
+# put following text in /etc/rstudio/rserver.conf
+# auth-required-user-group=rstudio-users
+
+# Create user and assign to group
+useradd sam
+passwd sam
+usermod -g rstudio-users sam

@@ -46,18 +46,26 @@ These steps are taken from [here](https://posit.co/download/rstudio-server/).
 
 RStudio Server works for all users other than root, so we need to create users and a group to use for scoping what RStudio Server will allow in.
 
--   useradd sam
+-   `useradd sam`
 
--   passwd sam
+-   `passwd sam`
 
 Users then need to be put into the rstudio-users group
 
--   sudo groupadd rstudio-users
+-   `sudo groupadd rstudio-users`
 
--   usermod -g rstudio-users sam_real1
+-   `usermod -g rstudio-users sam`
 
--   usermod -g rstudio-users sam_real2
+See who's in a group (lid is in libuser)
 
--   usermod -g rstudio-users somer_stat_real
+-   `lid -g rstudio-users`
+
+Edit user's main group
+
+-   `usermod -g rstudio-users sam`
+
+Remove user from group (when not main group)
+
+-   `gpasswd -d sam rstudio-users`\
 
 \* \* \* \* \* (cd /home/sam/Test\\ RStudio\\ Server\\ Project && /usr/local/bin/Rscript /home/sam/Test\\ RStudio\\ Server\\ Project/Trying\\ to\\ Schedule\\ A\\ Thing.R)
