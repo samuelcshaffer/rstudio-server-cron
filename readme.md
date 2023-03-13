@@ -70,8 +70,20 @@ Remove user from group (when not main group)
 
 ## Setting up Git
 
-For the most part, setting up Git is easy, except authenticating can be tough. My favorite thing to do is to create a single Personal Access Token for 30 days for each repository you're working in. Then, it's easy to tell Git to store your credentials in plain text and it's not a huge deal given other security measures we take.
+For the most part, setting up Git is easy, except authenticating can be tough.
 
-Create Personal Access Token for Repo
+The first few setup steps are the same, time to tell your git installation who you are
+
+`git config --global user.email "samuel.c.shaffer@gmail.com"`
+
+`git config --global user.name "Sam Shaffer"`
+
+`git config --global init.defaultBranch main`
+
+My favorite thing to do is to create a single Personal Access Token for 30 days for each repository you're working in. Then, it's easy to tell Git to store your credentials in plain text and it's not a huge deal given other security measures we take.
+
+### Create Personal Access Token for Repo 
+
+In GitHub, click your icon in the top right and go down to Settings -\> Developer Settings -\> Personal Access Tokens -\> Fine-Grained Tokens. Create a new token, limit to the one repository the token will be working in, and grant only read and write access to Contents. The code will only appear once, so leave the window open!
 
 \* \* \* \* \* (cd /home/sam/Test\\ RStudio\\ Server\\ Project && /usr/local/bin/Rscript /home/sam/Test\\ RStudio\\ Server\\ Project/Trying\\ to\\ Schedule\\ A\\ Thing.R)
