@@ -66,6 +66,12 @@ Edit user's main group
 
 Remove user from group (when not main group)
 
--   `gpasswd -d sam rstudio-users`\
+-   `gpasswd -d sam rstudio-users`
+
+## Setting up Git
+
+For the most part, setting up Git is easy, except authenticating can be tough. My favorite thing to do is to create a single Personal Access Token for 30 days for each repository you're working in. Then, it's easy to tell Git to store your credentials in plain text and it's not a huge deal given other security measures we take.
+
+Create Personal Access Token for Repo
 
 \* \* \* \* \* (cd /home/sam/Test\\ RStudio\\ Server\\ Project && /usr/local/bin/Rscript /home/sam/Test\\ RStudio\\ Server\\ Project/Trying\\ to\\ Schedule\\ A\\ Thing.R)
