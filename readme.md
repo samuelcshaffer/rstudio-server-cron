@@ -6,6 +6,7 @@ This is a project with a simple code to be used for testing RStudio Server, cron
 
 These steps are taken from [here](https://posit.co/download/rstudio-server/).
 
+On CentOS7 box, 
 1.  [Install R](https://docs.posit.co/resources/install-r/)
     -   Enable the Extra Packages for Enterprise Linux (EPEL) repository
         -   `sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
