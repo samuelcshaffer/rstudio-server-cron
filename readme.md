@@ -13,11 +13,13 @@ On CentOS7 box,
     -   Specify R Version
         -   `export R_VERSION=4.1.3`
     -   Download and Install R
-        -   `curl -O https://cdn.rstudio.com/r/centos-7/pkgs/R-${R_VERSION}-1-1.x86_64.rpmsudo yum install R-${R_VERSION}-1-1.x86_64.rpm`
+        -   `curl -O https://cdn.rstudio.com/r/centos-7/pkgs/R-${R_VERSION}-1-1.x86_64.rpm`
+        -   `sudo yum install R-${R_VERSION}-1-1.x86_64.rpm`
     -   Verify Installation
         -   `/opt/R/${R_VERSION}/bin/R --version`
     -   Create Symlink to R (only for first R installation)
-        -   `$ sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R     $ sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript`
+        -   `sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R     
+        -   `sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript`
 2.  Install RStudio Server
     -   `sudo yum install wget`
 
