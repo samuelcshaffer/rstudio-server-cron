@@ -84,4 +84,9 @@ My favorite thing to do is to create a single Personal Access Token for 30 days 
 
 In GitHub, click your icon in the top right and go down to Settings -\> Developer Settings -\> Personal Access Tokens -\> Fine-Grained Tokens. Create a new token, limit to the one repository the token will be working in, and grant only read and write access to Contents. The code will only appear once, so leave the window open!
 
+## Cron Job
+This is an example of what the crontab -l should show, where adding it with crontab -e is a simple copy and paste. This exampe shows a minutely call of two commands, one that brings the terminal to the project directory and one that calls Rscript and passes the path for the script to be run.
+
 \* \* \* \* \* (cd /home/sam/Test\\ RStudio\\ Server\\ Project && /usr/local/bin/Rscript /home/sam/Test\\ RStudio\\ Server\\ Project/Trying\\ to\\ Schedule\\ A\\ Thing.R)
+
+There are some details to figure out about how this should work in temrs of users and whatnot, but I think there should only be one user with any cronjobs running (maybe separate from the python side). In a world with RStudio Server, I think there should be a group with a SomerStat account and then user accounts for different users. People can develop on the machine in their user profiles, push changes to GitHub, pull those changes into the SomerStat account, and handle cron jobs also within that account. This way, everything that actually runs and has any importance at all is not tied to individual users or accounts and it's all in the same place.
